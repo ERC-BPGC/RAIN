@@ -28,16 +28,6 @@ The package is divided by the following structure
 
 Refer to the Individual Packages for more Details.
 ## Installation
-1. Fork and clone the package into your workspace
-```bash
-cd catkin_ws/src
-git clone git@github.com:your-github-username/RAIN.git
-```
-2. Build the package
-```bash
-catkin build
-```
-if you do not have `python-catkin-tools`, install them from [here](https://catkin-tools.readthedocs.io/en/latest/installing.html) 
 
 ## Contribution Guidelines
 Refer to [CONTRIBUTION.md](CONTRIBUTION.md) for information on Contribution
