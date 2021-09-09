@@ -48,6 +48,7 @@ Follow this guide to start contributing to RAIN
 	git checkout -b #branch_name
 	```
 
+* Make sure the changes, additions etc. are documented propoerly in `CHANGELOG.rst` of the package. 
 
 This will push the changes to the forked remote repo. Once this is done, you can open 'Pull Request' (PR) to the repo which will then be reviwed and merged after making some changes (if any)
 
