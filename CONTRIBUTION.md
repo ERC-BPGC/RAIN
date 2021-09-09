@@ -51,6 +51,7 @@ Follow this guide to start contributing to RAIN
 
 This will push the changes to the forked remote repo. Once this is done, you can open 'Pull Request' (PR) to the repo which will then be reviwed and merged after making some changes (if any)
 
+## Code Style
 
 If you add any new code in the package, use [Google Style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) to write the documentation.
 
