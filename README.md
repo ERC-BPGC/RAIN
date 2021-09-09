@@ -28,7 +28,6 @@ The package is divided by the following structure
 
 Refer to the Individual Packages for more Details.
 ## Installation
-Will be updated soon.
 
 ## Contribution Guidelines
 Refer to [CONTRIBUTION.md](CONTRIBUTION.md) for information on Contribution
