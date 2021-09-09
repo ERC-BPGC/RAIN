@@ -9,14 +9,14 @@ Follow this guide to start contributing to RAIN
 * Clone your fork to your computer using :
 	
 	```
-	git clone https://github.com/your-github-username/RAIN.git
+	git clone git@github.com:your-github-username/RAIN.git
 	```
 
 * Set the remotes :
 
 	```bash
-	git remote add origin https://www.github.com/your-github-username/RAIN.git
-	git remote add upstream https://www.github.com/ERC-BPGC/RAIN.git
+	git remote add origin git@github.com:your-github-username/RAIN.git
+	git remote add upstream git@github.com:ERC-BPGC/RAIN.git
 	```
 
 * Updating the forks:
