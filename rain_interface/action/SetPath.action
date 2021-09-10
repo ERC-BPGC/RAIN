@@ -1,0 +1,6 @@
+geometry_msgs/PoseStamped goal
+---
+nav_msgs/Path path
+std_msgs/String status
+---
+uint32 iteration
