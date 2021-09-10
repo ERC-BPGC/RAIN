@@ -1,0 +1,7 @@
+nav_msgs/Path path
+---
+std_msgs/String global_status
+---
+geometry_msgs/PoseStamped target_pose
+geometry_msgs/Twist velocity
+std_msgs/String current_status
