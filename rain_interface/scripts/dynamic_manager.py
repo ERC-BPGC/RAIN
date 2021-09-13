@@ -1,10 +1,12 @@
+#!/usr/bin/env python3
+
 import actionlib
 import rospy
 from std_msgs.msg import Header
 from geometry_msgs.msg import Point, PoseStamped, Pose, Quaternion, Twist
 from nav_msgs.msg import Path, Odometry
 
-from rain_interface.msg import SetPathAction, SetPathGoal, ExecPathAction, ExecPathFeedback, ExecPathGoal
+from rain_interface.msg import SetPathAction, SetPathGoal, ExecPathAction, ExecPathGoal
 
 class DynamicManager:
     def __init__(self, goal_topic="/goal", vel_topic="/cmd_vel", odom_topic="/odom", path_topic="/path"):
