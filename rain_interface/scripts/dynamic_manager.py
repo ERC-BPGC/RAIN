@@ -18,8 +18,8 @@ class DynamicManager:
         # All subscribers and publishers here
         self.path_pub = rospy.Publisher(self.path_topic, Path, queue_size=10)
         self.vel_pub = rospy.Publisher(self.vel_topic, Twist, queue_size=10)
-        self.goal_sub = rospy.Subsriber(self.goal_topic, PoseStamped, self.__goal_sub)
-        self.odom_sub = rospy.Subsriber(self.odom_topic, Odometry, self.__odom_sub)
+        self.goal_sub = rospy.Subscriber(self.goal_topic, PoseStamped, self.__goal_sub)
+        self.odom_sub = rospy.Subscriber(self.odom_topic, Odometry, self.__odom_sub)
 
         # Initialise all action clients here
         self.set_path_client = actionlib.SimpleActionClient("set_path", SetPathAction)
@@ -29,7 +29,8 @@ class DynamicManager:
         self.current_position = Point(0, 0, 0)
         self.current_orientation = Quaternion(0, 0, 0, 1)
 
-        self.goal = None
+        self.goal = PoseStamped()   # Was set to none hence error
+        self.path = Path()
 
     # Subscriber functions
     def __odom_sub(self, msg):
@@ -45,7 +46,7 @@ class DynamicManager:
 
     # Action Clients
     def send_get_path_action(self):
-        # If the server is not active even after three seconds od goal sent. Kill it
+        # If the server is not active even after three seconds of goal sent. Kill it
         self.set_path_client.wait_for_server(timeout=rospy.Duration(3))
         
         set_path_goal = SetPathGoal()
@@ -57,7 +58,8 @@ class DynamicManager:
         result = self.set_path_client.get_result()
         rospy.loginfo("Set Path Executed with status %s. Done function called to execute the path", result.status)
 
-    def send_exec_path_action(self, result):
+    def send_exec_path_action(self, goal_status, result):
+        # done_cb gets 2 arguments
         # Publish the path
         self.__path_publish(result.path)
 
@@ -73,6 +75,8 @@ class DynamicManager:
         self.execute_path_client.wait_for_result()
 
         result = self.execute_path_client.get_result()
+        self.path = result
+        print(result)
 
         rospy.loginfo("Completed Executing path with status %s", result.global_status)
 
