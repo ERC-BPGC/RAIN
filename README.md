@@ -10,11 +10,11 @@ The main aim of the Project is to develop software that can be deployed on an In
 
 ## Product Stages
 1. ### Mark I
-- [ ] AStar Algorithm for Global Planning with fixed waypoints in an indoor environment.
+- [x] AStar Algorithm for Global Planning with fixed waypoints in an indoor environment.
 - [ ] PID Controller for waypoint to waypoint navigation.
 - [ ] `move_base` based Global and Local Costmaps.
 - [ ] `gmapping` based mapping framework and `amcl` for localisation.
-- [ ] `move_base_flex` inspired rospy backend for integration.
+- [x] `move_base_flex` inspired rospy backend for integration.
 
 ## Docs
 The development process of the project shall be documented in the `docs` folder of the project as Markdown files. A supporting documentation for each of the Product stage will be made.
